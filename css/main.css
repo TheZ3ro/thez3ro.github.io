@@ -1,5 +1,5 @@
 body {
-	background: url(../img/background.jpg) no-repeat fixed center center;
+	background: url(http://th3zero.altervista.org/img/background.jpg) no-repeat fixed center center;
 	font-family: 'segoe ui', trebuchet ms, arial; 
 	font-size: 9pt; 
 	color: #777;
@@ -35,7 +35,7 @@ table, div {font-size: 9pt; color: #777; border-spacing: 0}
 .mleft {width: 1px; background-color: #1F1F1F; background-image: none; /*background-image: url(http://skin.forumfree.net/1867/border.png);*/ }
 .mleft_bottom {width: 1px; height: 1px;  background:url(../img/mleft_bottom.png); background-repeat: no-repeat}
 
-.mright_top {width: 1px; height: 42px; background:url(../img/mright_top.png); background-repeat: no-repeat}
+.mright_top {width: 1px; height: 42px; background:url(../img/mleft_top.png); background-repeat: no-repeat}
 .mright {width: 1px; background-color: #1F1F1F; background-image: none; /* background-image: url(http://skin.forumfree.net/1867/border.png);*/}
 .mright_bottom {width: 1px; height: 1px; background:url(../img/mleft_bottom.png); background-repeat: no-repeat}
 
@@ -225,45 +225,6 @@ opacity: .9;
 }
 
 	#twitter:hover {
-		background: rgba(0,0,0,0.5);
-		padding: 5px 25px;
-	}
-
-	
-	
-#facebook {
-	z-index: 2000;
-	position: fixed;
-	top: 80px;
-	right: -330px;
-	opacity: .9
-
-	
-	/* Border Radius */
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
-	
-	/* Border Shadow */
-	-webkit-box-shadow: 1px 2px 2px rgba(0,0,0,0.6);
-	-moz-box-shadow: 1px 2px 2px rgba(0,0,0,0.6);
-	box-shadow: 1px 2px 2px rgba(0,0,0,0.6);
-	
-	/* Animation (Webkit, Gecko & Mozilla) */
-	-webkit-transition-duration: 0.20s;
-	-webkit-transition-timing-function: ease-out; 
-	-moz-transition-duration: 0.20s;
-	-moz-transition-timing-function: ease-out; 
-	
-	color: #ffffff;
-	background: rgba(0,0,0,0.2);
-	display: inline-block;
-	padding: 5px 15px;
-	outline: none;
-	text-decoration: none;
-}
-
-	#facebook:hover {
 		background: rgba(0,0,0,0.5);
 		padding: 5px 25px;
 	}
