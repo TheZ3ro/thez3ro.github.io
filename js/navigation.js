@@ -3,7 +3,7 @@
 
 
 var site_url = '';
-var nav  = [ '#home', '#programmi', '#chat', '#tool', '#contact' ];
+var nav  = [ '#home' ];
 
 $(document).ready(function(){
 	setBkgPos();
@@ -42,134 +42,19 @@ $(document).ready(function(){
             
 	function me()
     {
-		$.post("http://th3zero.altervista.org/page.php", { p: "" }, function(result){
-            if(result != '')
-            {
-				$('#page').hide('slow', function() {
+		$('#page').hide('slow', function() {
+			// Animation complete.
+			$('#page').empty();
+			$('#page').load();
+			$('#page').show('slow', function() {
 				// Animation complete.
-					$('#page').empty();
-					$('#page').append(result);
-					$('#page').show('slow', function() {
-					// Animation complete.
-					});
-				});
-                return;   
-            }
-        });   
-    }
-    
-        
-    function programmi()
-    {	
-		$.post("http://th3zero.altervista.org/page.php", { p: "programmi" }, function(result){
-            if(result != '')
-            {
-				$('#page').hide('slow', function() {
-				// Animation complete.
-					$('#page').empty();
-					$('#page').append(result);
-					$('#page').show('slow', function() {
-					// Animation complete.
-					});
-				});
-                return;   
-            }
-        });   
-    }
-    
-    function chat()
-    {	
-		$.post("http://th3zero.altervista.org/page.php", { p: "chat" }, function(result){
-            if(result != '')
-            {
-				$('#page').hide('slow', function() {
-				// Animation complete.
-					$('#page').empty();
-					$('#page').append(result);
-					$('#page').show('slow', function() {
-					// Animation complete.
-					});
-				});
-                return;   
-            }
-        });   
-    }
-    
-    function tool()
-    {	
-		$.post("http://th3zero.altervista.org/Include/tool.php", { p: "" }, function(result){
-            if(result != '')
-            {
-				$('#page').hide('slow', function() {
-				// Animation complete.
-					$('#page').empty();
-					$('#page').append(result);
-					$('#page').show('slow', function() {
-					// Animation complete.
-					});
-				});
-                return;   
-            }
-        });   
-    }
-    
-    function utili()
-    {	
-		$.post("http://th3zero.altervista.org/page.php", { p: "utili" }, function(result){
-            if(result != '')
-            {
-				$('#page').hide('slow', function() {
-				// Animation complete.
-					$('#page').empty();
-					$('#page').append(result);
-					$('#page').show('slow', function() {
-					// Animation complete.
-					});
-				});
-                return;   
-            }
-        });   
+			});
+		});
+        return;     
     }
 	
 	$('#home').click(function(){
        me(); 
-    });
-    $('#programmi').click(function(){
-       programmi(); 
-    });
-    $('#chat').click(function(){
-       chat(); 
-    });
-    $('#tool').click(function(){
-       tool(); 
-    });
-    $('#contact').click(function(){
-       utili(); 
-    });
-	
-	
-	$.history.init(function(url) {
-            if(url == "me"){
-				me();
-			}
-			else if(url == "tool"){
-				tool();
-			}
-			else if(url == "contact"){
-				utili();
-			}
-			else if(url == "chat"){
-				chat();
-			}
-			else if(url == "programmi"){
-				programmi();
-			}
-			else if(url == "noi"){
-				noi();
-			}
-			else{
-				me();
-			}
     });
 
 	
@@ -204,7 +89,7 @@ $(document).ready(function(){
     
     //main script
     fetchRandomMotto();
-	
+	me();
 }); 
 
 function _getHPos( id )
@@ -305,41 +190,6 @@ function mClick(e)
 	//location.href = this.id;
 }
 
-function noi()
-{	
-	$.post("http://th3zero.altervista.org/page.php", { p: "noi" }, function(result){
-		if(result != '')
-		{
-			$('#page').hide('slow', function() {
-			// Animation complete.
-				$('#page').empty();
-				$('#page').append(result);
-				$('#page').show('slow', function() {
-				// Animation complete.
-				});
-			});
-			return;   
-		}
-	});   
-}
-
-function tools(title)
-{	
-	$.post(title, { p: "" }, function(result){
-		if(result != '')
-		{
-			$('#page').hide('slow', function() {
-			// Animation complete.
-				$('#page').empty();
-				$('#page').append(result);
-				$('#page').show('slow', function() {
-				// Animation complete.
-				});
-			});
-			return;   
-		}
-	});   
-}
 
 $(function() {
 	// OPACITY OF BUTTON SET TO 50%
