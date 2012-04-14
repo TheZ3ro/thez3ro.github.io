@@ -45,7 +45,7 @@ $(document).ready(function(){
 		$('#page').hide('slow', function() {
 			// Animation complete.
 			$('#page').empty();
-			$('#page').load('me.html');
+			$('#page').load('me.html #page');
 			$('#page').show('slow', function() {
 				// Animation complete.
 			});

@@ -1,4 +1,98 @@
-<br><span id="p_title">Me</span><br><br>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>TheZero's Lair</title>
+  <link rel="SHORTCUT ICON" href="http://th3zero.altervista.org/favicon.ico" />
+  
+  <!--   *Copyright 2011 TheZero <TheZero@Linux>
+ *
+ *      GNU GPL License
+ *      This program is free software; you can redistribute it and/or modify
+ *      it under the terms of the GNU General Public License as published by
+ *      the Free Software Foundation; either version 2 of the License, or
+ *      (at your option) any later version.
+ *      
+ *      This program is distributed in the hope that it will be useful,
+ *      but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *      GNU General Public License for more details.
+ *      
+ *      You should have received a copy of the GNU General Public License
+ *      along with this program; if not, write to the Free Software
+ *      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+ *      MA 02110-1301, USA.
+ *      
+ */ -->
+ 
+	<link rel="stylesheet" href="./css/main.css" type="text/css" />
+	
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="./js/jquery-bp.js" ></script>
+	<script type="text/javascript" src="./js/navigation.js" ></script>
+
+		
+	<meta name="generator" content="Geany 0.20" />
+</head>
+<body>
+	<div><a name="Top"></a></div>
+	<div id="header">
+		<!--Header-->
+		
+		<div id="title" style="float: left;  margin-left:150px"><a href="http://thezero.it/"><img src="./img/logo.png" alt="Logo" /></a></div>
+		<div id="cit"></div>
+        <br />
+
+<br />
+		
+	</div>
+
+<!--Menu Nav -->
+	<div id="navigation" class="container">
+		<div id="home" class="pri-nav"><div></div></div>
+	</div>
+ 
+
+<div class="container">
+		<div class="content">
+			<div id="content-title">
+				<div id="content-a">
+					<!-- Contenuto --> 
+				
+				
+				
+<table class="skin_tbl" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td class="mleft_top"></td>
+<td>
+<table class="mback" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td class="mback_left"></td>
+<td class="mback_center"> 
+<div class="mtitle">
+
+	<b><span style=color:#ffffff><!--Titolo--></span></b>
+
+</div>
+</td>
+<td class="mback_right"></td>
+</tr>
+</table>
+</td>
+<td class="mright_top"></td>
+</tr>
+<tr>
+<td class="mleft">
+</td>
+<td>
+<table class="mainbg" style="width:100%" cellpadding="4" cellspacing="1">  
+<tr title=""> 
+<td class="ww" rowspan="3"> 
+<!-- Contenuto -->
+<div id="cont">
+<br>
+<div id="page">
+
+		<br><span id="p_title">Me</span><br><br>
 		<p>Sono uno studente, appassionato di informatica ed elettronica e tutto il mondo che le circonda in generale.<br>
 		Sul web il mio nickname &egrave; TheZero.</p>
 		<p>Programmo in C/C++, VB.net, C# - XNA e Bash come linguaggi stand-alone,<br>
@@ -25,3 +119,53 @@
 		sempre nuove cose con il sogno di diventare un "pezzo grosso".</p>
 		
 		<br><br>
+
+<!--Chiuso Div id=page-->
+</div>
+		
+		<br><br><br><hr><hr><hr><br><br>
+		<!--Copyright-->
+		<div class="copyr">
+			<p style="margin-left: 50px; width: 824px; color: #1178f6; font-family: monospace;">
+				<br /><span>TheZero's Lair is powered by  <a href="http://twitter.com/#!/Th3Zer0" title="TheZero">TheZero</a> and a huge amount of  <a href="http://en.wikipedia.org/wiki/Caffeine" title="Caffeine" rel="nofollow">C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub></a></span>
+		</div>
+
+<!--Fine contenuto -->
+<br /><br />
+</div>
+
+ 
+ </td> 
+</tr> 
+</table></td><td class="mright"></td></tr><tr><td class="mleft_bottom"></td><td><table class="msub" width="100%" cellpadding="0" cellspacing="0"><tr><td class="msub_left"></td><td class="msub_center">&nbsp;</td><td class="msub_right"></td></tr></table></td><td class="mright_bottom"></td></tr></table><br /><br /> 
+
+ 	           </div>
+			</div>
+		</div>
+	</div>
+
+
+<a href="#Top" class="UP" id="f_up"><img src="http://th3zero.altervista.org/img/icon-top.png" width="26" height="26" alt="Top" /></a>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$(function(){
+	    if(navigator.appVersion.indexOf("MSIE ")!=-1) $('#f_up').fadeIn();
+		else
+		{
+			var statusF='out';
+			$(window).scroll(function()
+			{
+				if(statusF!='in' && $(this).scrollTop()>100){statusF='in'; $('#f_up').fadeIn()}
+				else if(statusF!='out' && $(this).scrollTop()<100){statusF='out'; $('#f_up').fadeOut()}
+			});
+		}
+		$('.UP').click(function(){ $('body,html').animate({scrollTop:0},600); return false});
+	});
+});
+
+</script>
+
+
+</body>
+</html>
