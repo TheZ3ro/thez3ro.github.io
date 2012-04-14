@@ -42,7 +42,7 @@ $(document).ready(function(){
             
 	function me()
     {
-		$.post("page.php", { p: "" }, function(result){
+		$.post("http://th3zero.altervista.org/page.php", { p: "" }, function(result){
             if(result != '')
             {
 				$('#page').hide('slow', function() {
@@ -61,7 +61,7 @@ $(document).ready(function(){
         
     function programmi()
     {	
-		$.post("page.php", { p: "programmi" }, function(result){
+		$.post("http://th3zero.altervista.org/page.php", { p: "programmi" }, function(result){
             if(result != '')
             {
 				$('#page').hide('slow', function() {
@@ -79,7 +79,7 @@ $(document).ready(function(){
     
     function chat()
     {	
-		$.post("page.php", { p: "chat" }, function(result){
+		$.post("http://th3zero.altervista.org/page.php", { p: "chat" }, function(result){
             if(result != '')
             {
 				$('#page').hide('slow', function() {
@@ -97,7 +97,7 @@ $(document).ready(function(){
     
     function tool()
     {	
-		$.post("Include/tool.php", { p: "" }, function(result){
+		$.post("http://th3zero.altervista.org/Include/tool.php", { p: "" }, function(result){
             if(result != '')
             {
 				$('#page').hide('slow', function() {
@@ -115,7 +115,7 @@ $(document).ready(function(){
     
     function utili()
     {	
-		$.post("page.php", { p: "utili" }, function(result){
+		$.post("http://th3zero.altervista.org/page.php", { p: "utili" }, function(result){
             if(result != '')
             {
 				$('#page').hide('slow', function() {
@@ -307,7 +307,7 @@ function mClick(e)
 
 function noi()
 {	
-	$.post("page.php", { p: "noi" }, function(result){
+	$.post("http://th3zero.altervista.org/page.php", { p: "noi" }, function(result){
 		if(result != '')
 		{
 			$('#page').hide('slow', function() {
