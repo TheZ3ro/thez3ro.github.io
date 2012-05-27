@@ -1,6 +1,6 @@
 body {
-	background: url(http://th3zero.altervista.org/img/background.jpg) no-repeat fixed center center;
-	font-family: 'segoe ui', trebuchet ms, arial; 
+	background: url(../img/background.jpg) no-repeat fixed center center;
+	font-family: 'segoe ui', trebuchet ms, arial, sans-serif; 
 	font-size: 9pt; 
 	color: #777;
 	position:relative;
@@ -17,30 +17,19 @@ table, div {font-size: 9pt; color: #777; border-spacing: 0}
 
 /* Content Skin */
 
-.skin_tbl_width, .skin_tbl {width: 97.2%; margin-left: 5px}
-.mtitle {text-align: left; font-size: 12pt; padding-bottom: 3px; color: #D0D0D0}
-
-.mback {height: 42px}
-.msub {height: 42px}
-
-.mback_left {width: 24px; background:url(../img/mback_left.png); background-repeat: no-repeat; background-position: bottom}
-.mback_center {background:url(../img/mback_center.png); background-repeat: repeat-x; background-position: bottom}
-.mback_right {width: 24px; background:url(../img/mback_right.png); background-repeat: no-repeat; background-position: bottom}
-
-.msub_left {width: 24px; background:url(../img/msub_right.png); background-repeat: no-repeat; background-position: bottom}
-.msub_center {background:url(../img/msub_center.png); background-repeat: repeat-x; background-position: bottom}
-.msub_right {width: 24px;  background:url(../img/msub_left.png); background-repeat: no-repeat; background-position: bottom}
-
-.mleft_top {width: 1px; height: 42px; background:url(../img/mleft_top.png); background-repeat: no-repeat}
-.mleft {width: 1px; background-color: #1F1F1F; background-image: none; /*background-image: url(http://skin.forumfree.net/1867/border.png);*/ }
-.mleft_bottom {width: 1px; height: 1px;  background:url(../img/mleft_bottom.png); background-repeat: no-repeat}
-
-.mright_top {width: 1px; height: 42px; background:url(../img/mleft_top.png); background-repeat: no-repeat}
-.mright {width: 1px; background-color: #1F1F1F; background-image: none; /* background-image: url(http://skin.forumfree.net/1867/border.png);*/}
-.mright_bottom {width: 1px; height: 1px; background:url(../img/mleft_bottom.png); background-repeat: no-repeat}
-
-.ww {background-color: #1F1F1F; background-image: none;}
-
+.supp {
+	height: 41px;
+	background:url(../img/mback_center.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	position: relative;
+}
+.ww {
+	background-color: #1F1F1F;
+	background-image: none;
+	border-left: 1px solid #555;
+	border-right: 1px solid #555;
+}
 .container{
 	margin: 0pt auto;
 	margin-left:213px;
@@ -193,17 +182,36 @@ opacity: .9;
 /* For CSS SocialApps */
 	
 #twitter {
-	z-index: 2000;
-	position: fixed;
-	top: 20px;
-	right: -180px;
 	opacity: .9
 	
 	
-	/* Border Radius */
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
+	
+	display: inline-block;
+	padding: 5px 15px;
+	outline: none;
+	text-decoration: none;
+}
+
+#twitter:hover {
+	background: rgba(0,0,0,0.5);
+	padding: 5px 25px;
+}
+	
+.buttons {
+    padding: 10px 2px;
+}
+.buttons a {
+    border: 0 none;
+    margin-left: 12px;
+}
+.buttons a:first-child {
+    margin: 0;
+}
+.buttons span {
+/* Border Radius */
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 	
 	/* Border Shadow */
 	-webkit-box-shadow: 1px 2px 2px rgba(0,0,0,0.6);
@@ -211,21 +219,25 @@ opacity: .9;
 	box-shadow: 1px 2px 2px rgba(0,0,0,0.6);
 	
 	/* Animation (Webkit, Gecko & Mozilla) */
-	-webkit-transition-duration: 0.20s;
+	-webkit-transition-duration: 0.50s;
 	-webkit-transition-timing-function: ease-out; 
-	-moz-transition-duration: 0.20s;
+	-moz-transition-duration: 0.50s;
 	-moz-transition-timing-function: ease-out; 
 	
-	color: #ffffff;
+	color: #FFF;
 	background: rgba(0,0,0,0.2);
-	display: inline-block;
-	padding: 5px 15px;
-	outline: none;
-	text-decoration: none;
+    font-size: 9pt;
+    font-variant: small-caps;
+    font-weight: bold;
+    padding: 10px;
+    text-shadow: 0 1px 0 #222;
+    text-transform: capitalize;
 }
-
-	#twitter:hover {
-		background: rgba(0,0,0,0.5);
-		padding: 5px 25px;
-	}
-
+.buttons span:hover {
+    color: #AAA;
+	background: rgba(0,0,0,0.5);
+    text-shadow: 0 1px 0 #000;
+}
+.buttons span img {
+	vertical-align: middle;
+}
