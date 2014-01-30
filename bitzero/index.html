@@ -9,7 +9,7 @@
 		<meta name="author" content="TheZero">
 		<link rel="SHORTCUT ICON" href="http://th3zero.altervista.org/favicon.ico" />
     
-		<title>404</title>
+		<title>TheZero</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -32,21 +32,15 @@
 
 	<body>
 
-    <div class="jumbotron jb gray">
-  <div class="container">
-      <h1>Errore 404 &nbsp;&nbsp;&nbsp;:(</h1>
-      <p>
-      Scusate, Sono uscito a prendere una tazza di caffè. <img style="vertical-align: middle; border:none" src="/img/cup-error.png" /><br/>
-      Questa pagina non esiste, è stata cancellata o non è ancora stata creata da <b>Greevy</b>, il mio mostriciattolo verde.<br/>
-      <br/> <img style="border:none;float:left;" align="top" src="/img/green_monster.png" />
-      Alcune soluzioni possono essere:<br/>
-      - Aspettare finche <b>Greevy</b> ripari l'errore<br/>
-      - Cliccare piu forte<br/>
-      - <a href="/index.html">Tornare alla homepage</a><br/>
-      <br/>
-      </p>
-  </div>
-</div>
+    <script>
+  var lang = window.navigator.userLanguage || window.navigator.language;
+  lang = lang.split("-")[0];
+  if(lang=="it"){
+    window.location = "/it/BitZero";
+  }else{
+    window.location = "/en/BitZero";
+  }
+</script>
 
 
     
@@ -79,6 +73,12 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    
+      <script src="/js/underscore.js"></script>
+    
+      <script src="/js/gh3.js"></script>
+    
+      <script src="/js/github.js"></script>
     
   </body>
 </html>
