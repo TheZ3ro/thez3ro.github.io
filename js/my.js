@@ -6,5 +6,5 @@
   $("#footer").css("overflow","hidden");
   $("#container").css("position","relative");
   $("#container").css("z-index",5);
-  $("#container").css("margin-bottom",b);
+  $("#container").css("margin-bottom",$("#f").height());
   $("#container").css("box-shadow","0px 1px 7px rgba(0, 0, 0, 0.8)");
