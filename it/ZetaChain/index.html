@@ -32,7 +32,15 @@
 
 	<body>
 
-    <style>
+    <script src="http://coinmill.com/frame.js"></script>
+<script>
+var currency_round=true;
+var currency_decimalSeparator='.';
+var currency_thousandsSeparator='';
+var currency_thousandsSeparatorMin=3;
+var currency_decimalDigits=5;
+</script>
+<style>
 .navbar {margin-bottom:0px}
 .white {background-color: #FFF;} 
 input { margin-bottom:20px;}
@@ -53,12 +61,9 @@ input { margin-bottom:20px;}
       <div class="row">
         <div class="navbar-header">
           <a class="navbar-brand" href="./index.html">
-            <img class="navbar-brand-img" src="./img/zetaicon.png"/>
+            <img class="navbar-brand-img" src="./img/icon.png"/>
             
-            Zetachain</a>
-        </div>
-        <div class="navbar-collapse collapse pull-right">
-          <!--<a class="navbar-brand" href="./richiesta.php">Richiedi il tuo hosting!</a>-->
+            Zeta Price Converter</a>
         </div>
       </div>
     </div>
@@ -67,11 +72,17 @@ input { margin-bottom:20px;}
 <div class="jumbotron jb white">
   <div class="container" style="margin-top:50px">
     <!-- Example row of columns -->
-    <div class="row">
+      <div class="row">
         <br/><br/>
-        <div class="col-md-6 col-md-offset-3" role="form">
+        <div class="col-md-1 col-md-offset-6">
+          <button type="button" class="btn btn-default btn-lg" onclick="window.location.reload()" style="left:-30px;position:relative;">
+            <span class="glyphicon glyphicon-refresh"></span>
+          </button>
+        </div>
+        <br/><br/>
+        <div class="col-md-10 col-md-offset-1" role="form" style="text-align:center">
           <div class="row">
-            <div class="col-lg-5">
+            <div class="col-md-5 col-md-offset-1">
               <div class="input-group input-group-lg">
                 <input id="altcoin" type="text" class="form-control">
                 <span class="input-group-btn">
@@ -80,15 +91,15 @@ input { margin-bottom:20px;}
                       <span id="altcoin-label">ZET</span> <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" role="menu">
-                      <li><a onClick="setAlt('ZET')">ZET</a></li>
-                      <li><a onClick="setAlt('BTC')">BTC</a></li>
+                      <li><a onClick="setAlt('ZET')">ZET - Zetacoin</a></li>
+                      <li><a onClick="setAlt('BTC')">BTC - Bitcoin</a></li>
                     </ul>
                   </div>
                 </span>
               </div><!-- /input-group -->
             </div><!-- /.col-lg-6 -->
             <span style="font-size:36px;vertical-align: middle;float: left;">=</span>
-            <div class="col-lg-5">
+            <div class="col-md-5">
               <div class="input-group input-group-lg">
                 <input id="fiat" type="text" class="form-control">
                 <span class="input-group-btn">
@@ -97,43 +108,62 @@ input { margin-bottom:20px;}
                       <span id="fiat-label">USD</span> <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" role="menu">
-                      <li><a onClick="setFiat('USD')">USD</a></li>
-                      <li><a onClick="setFiat('EUR')">EUR</a></li>
-                      <li><a onClick="setFiat('GBP')">GBP</a></li>
+                      <li><a onClick="setFiat('USD')">USD - US Dollar</a></li>
+                      <li><a onClick="setFiat('EUR')">EUR - Euro</a></li>
+                      <li><a onClick="setFiat('GBP')">GBP - Pound Sterling</a></li>
+                      <li><a onClick="setFiat('CZK')">CZK - Czech Koruna</a></li>
+                      <li><a onClick="setFiat('SGD')">SGD - Singapore Dollar</a></li>
+                      <li><a onClick="setFiat('BTC')">BTC - Bitcoin</a></li>
                     </ul>
                   </div>
                 </span>
               </div><!-- /input-group -->
             </div><!-- /.col-lg-6 -->
+            <br/>
           </div><!-- /.row -->
-      </div>
-    </div>
+          <small>Currency data courtesy <a href="http://coinmill.com/">coinmill.com</a></small>
+        </div>
+    </div><!-- container->row -->
   </div>
 </div>  
+ 
+
+<script>
+  function setAlt(type){
+    $("#altcoin-label").text(type);
+    var price=currency_convert($("#fiat").val(),$("#fiat-label").text(),$("#altcoin-label").text());
+    $("#altcoin").val(price);
+  }
+
+  function setFiat(type){
+    $("#fiat-label").text(type);
+    var price=currency_convert($("#altcoin").val(),$("#altcoin-label").text(),$("#fiat-label").text());
+    $("#fiat").val(price);
+  }
   
-<div class="jumbotron jb grey">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-5" style="padding-right:10px">
-        <h2>What is a BlockChain?</h2>
-        <p>Integral to Bitcoin is a public ledger, a database with a sequential record of all
-         transactions, known as the block chain, that records bitcoin ownership at present and at all points in the past.<br/>
-         [ from <a href="https://en.wikipedia.org/wiki/Bitcoin#Block_chain">Wikipedia</a> ]
-        </p>
-      </div>
-      <div class="col-md-offset-2 col-md-5">
-        <h2>Other Zetacoin Site</h2>
-        <ul class="list-sm">
-          <li><a href="http://zetacoin.cc">Zetacoin.cc</a></li>
-          <li><a href="http://zeta-coin.org">Zeta-coin.org</a></li>
-          <li><a href="https://nobs.is/">Nobs.is</a></li>
-          <li><a href="http://zetspin.cc/">Zetspin.cc</a></li>
-          <li><a href="http://zetacoin.cc/faqs/">FAQ about Zetacoin</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+  $("#fiat").on("input", function(){
+    var price=currency_convert($("#fiat").val(),$("#fiat-label").text(),$("#altcoin-label").text());
+    $("#altcoin").val(price);
+  });
+  $("#altcoin").on("input", function(){
+    var price=currency_convert($("#altcoin").val(),$("#altcoin-label").text(),$("#fiat-label").text());
+    $("#fiat").val(price);
+  });
+  
+  $('#fiat').on('keypress', function (event) {
+      if(event.which == '13'){
+        var price=currency_convert($("#fiat").val(),$("#fiat-label").text(),$("#altcoin-label").text());
+        $("#altcoin").val(price);
+      }
+  });
+  $('#altcoin').on('keypress', function (event) {
+      if(event.which == '13'){
+        var price=currency_convert($("#altcoin").val(),$("#altcoin-label").text(),$("#fiat-label").text());
+        $("#fiat").val(price);
+      }
+  });
+  
+</script> 
 
 
 
