@@ -9,7 +9,7 @@
 		<meta name="author" content="TheZero">
 		<link rel="SHORTCUT ICON" href="http://th3zero.altervista.org/favicon.ico" />
     
-		<title>ZetaChain</title>
+		<title>Zeta Price Converter</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -126,45 +126,6 @@ input { margin-bottom:20px;}
     </div><!-- container->row -->
   </div>
 </div>  
- 
-
-<script>
-  function setAlt(type){
-    $("#altcoin-label").text(type);
-    var price=currency_convert($("#fiat").val(),$("#fiat-label").text(),$("#altcoin-label").text());
-    $("#altcoin").val(price);
-  }
-
-  function setFiat(type){
-    $("#fiat-label").text(type);
-    var price=currency_convert($("#altcoin").val(),$("#altcoin-label").text(),$("#fiat-label").text());
-    $("#fiat").val(price);
-  }
-  
-  $("#fiat").on("input", function(){
-    var price=currency_convert($("#fiat").val(),$("#fiat-label").text(),$("#altcoin-label").text());
-    $("#altcoin").val(price);
-  });
-  $("#altcoin").on("input", function(){
-    var price=currency_convert($("#altcoin").val(),$("#altcoin-label").text(),$("#fiat-label").text());
-    $("#fiat").val(price);
-  });
-  
-  $('#fiat').on('keypress', function (event) {
-      if(event.which == '13'){
-        var price=currency_convert($("#fiat").val(),$("#fiat-label").text(),$("#altcoin-label").text());
-        $("#altcoin").val(price);
-      }
-  });
-  $('#altcoin').on('keypress', function (event) {
-      if(event.which == '13'){
-        var price=currency_convert($("#altcoin").val(),$("#altcoin-label").text(),$("#fiat-label").text());
-        $("#fiat").val(price);
-      }
-  });
-  
-</script> 
-
 
 
     
@@ -197,6 +158,8 @@ input { margin-bottom:20px;}
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    
+      <script src="/js/pricec.js"></script>
     
   </body>
 </html>
