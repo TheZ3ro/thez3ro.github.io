@@ -14,3 +14,4 @@ a [class^="icon-"],a [class*=" icon-"]{cursor:pointer;}
 .icon-android{*zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf17b;');}
 .icon-linux{*zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf17c;');}
 .icon-email {*zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0e0;');}
+.icon-keybase {*zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf13e;');}

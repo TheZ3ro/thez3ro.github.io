@@ -5,12 +5,14 @@ body {
     font: 14px/18px "Helvetica Neue", Arial, sans-serif;
     /*padding-bottom: 40px;*/
 }
-
 a {
     color: #2868a4;
 }
 a:hover {
     color: #eb611f;
+}
+footer a {
+    color: #2793f8;
 }
 .icon {
     color: #C4D2DF;

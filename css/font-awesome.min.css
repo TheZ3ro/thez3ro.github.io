@@ -49,4 +49,5 @@ a .icon-rotate-90:before,a .icon-rotate-180:before,a .icon-rotate-270:before,a .
 .icon-bitbucket:before{content:"\f171";}
 .icon-android:before{content:"\f17b";}
 .icon-linux:before{content:"\f17c";}
-.icon-email:before {content: "\f0e0";}
+.icon-email:before{content: "\f0e0";}
+.icon-keybase:before{content: "\f13e";}
