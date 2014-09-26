@@ -5,7 +5,10 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="My Lair in the Webspace">
+		<meta name="description" content="In these days, the news about ShellShock have scared many Linux-Sysadmin,
+but what is exactly ShellShock?
+Shellshock (CVE-2014-6271 and CVE-2014-7169) is an vulnerability in GNU&#39;s bash shell that gives attackers access to run remote commands on a vulnerable system. 
+">
 		<meta name="author" content="TheZero">
 		<link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
 		<link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
@@ -13,7 +16,7 @@
 		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
     
-		<title>TheZero</title>
+		<title>Shellshock CVE-2014-6271</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -48,7 +51,7 @@
     </div>
     <div class="links">
     
-    <a href="/" class="page-link active">Blog</a>
+    <a href="/" class="page-link">Blog</a>
     <a class="page-link" href="/archive.html">Archive</a>
     <a class="page-link" href="/pages.html">Pages</a>
     
@@ -80,15 +83,7 @@
       <div id="content">
         <div id="articles">
           <div class="article-list">
-            <div>
-
-  	
-
-    
-    	
-    		
-			
-			<div class="entry">
+            <div class="entry">
 
 	<div class="entry-content">
 
@@ -106,9 +101,32 @@
 but what is exactly ShellShock?<br/>
 Shellshock (CVE-2014-6271 and CVE-2014-7169) is an vulnerability in GNU&#39;s <a target="_BLANK" href="http://en.wikipedia.org/wiki/Bash_(Unix_shell)">bash</a> shell that gives attackers access to run <a target="_BLANK" href="http://en.wikipedia.org/wiki/Arbitrary_code_execution">remote commands</a> on a vulnerable system. </p>
 
-	  		
-	  		<p><a href="/blog/2014/09/26/Shellshock/">Read more »</a></p>
-	  		
+<!-- more --> 
+
+<p>If your system has not updated bash in the last 24 hours, you&#39;re
+<strong>most definitely vulnerable</strong> and have been since first boot. This security vulnerability affects versions 1.14 (released in 1994) to the most recent version 4.3 according to <a target="_BLANK" href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271">NVD</a>.<br/>
+(more at <a href="https://shellshocker.net">https://shellshocker.net</a>) <br/><br/></p>
+
+<p><strong>Testing Your System</strong></p>
+
+<p><strong>Exploit 1 (CVE-2014-6271)</strong></p>
+
+<p>There are a few different ways to test if your system is vulnerable to shellshock. Try running the following command in a shell.</p>
+
+<p><code>env x=&#39;() { :;}; echo vulnerable&#39; bash -c &quot;echo this is a test&quot;</code></p>
+
+<p>If you see &quot;Vulnerable&quot; you need to update bash. Otherwise, you should be good to go.</p>
+
+<p><strong>Exploit 2 (CVE-2014-7169)</strong></p>
+
+<p>Even after upgrading bash you may still be vulnerable to this exploit. Try running the following code.</p>
+
+<p><code>env X=&#39;() { (a)=&gt;\&#39; sh -c &quot;echo date&quot;; cat echo</code></p>
+
+<p>If the above command outputs the current date (it may also show errors), you are still vulnerable.</p>
+
+<p>If you&#39;ve tested your sytem, please leave a comment below. Don&#39;t forget to include your bash version and what OS you&#39;re running. Type bash --version for bash, and cat /etc/<em>release</em> for your OS.</p>
+
   		
 	  </article>
 
@@ -117,58 +135,31 @@ Shellshock (CVE-2014-6271 and CVE-2014-7169) is an vulnerability in GNU&#39;s <a
 </div>
 
 
-		
-    
-    	
-    		
-			
-			<div class="entry">
-
-	<div class="entry-content">
-
-	  <header>
-	    <h1 class="entry-title"><a href="/blog/2014/09/25/Jekyll-Intro/">Jekyll Intro</a></h1>
-	    <p class="entry-meta">
-		    Sep 25, 2014
-		     • Category: Blog
-	    </p>
-	  </header>
-
-	  <article class="entry-body">
-	  	
-	  		<p>I used Jekyll since it wasn&#39;t mainstream.</p>
-
-<p>My website now is a full-feature blog powered by Jekyll and Lambda-theme :)</p>
-
-<p>I&#39;m Italian (almost proud) but I will write english so everybody can read me easily.</p>
-
-<p>Good Reading. TLDR;</p>
-
-<p>TheZero.</p>
-
-	  		
-  		
-	  </article>
-
-  </div>
-
+	<div class="article-author">
+    <div class="avatar">
+    <img width="50" height="50" src="https://gravatar.com/avatar/0034b4b3f3aaeced2804f8f76aa94080?s=50" alt=" Avatar"/>
+    </div>
+    <div class="name">
+        <h4>Assembled by <b>TheZero</b> </h4>
+        Single line description about the author
+    </div>
 </div>
 
+	
+	    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = '';
+	(function() {
+	    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+	    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-		
-    
-    	
-    
-    	
-    
-    	
-    
-    	
-    
-    	
-    
+	
 
-</div>
+
 
           </div>
         </div>
