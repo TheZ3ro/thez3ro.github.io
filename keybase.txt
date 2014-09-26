@@ -1,0 +1,76 @@
+==================================================================
+https://keybase.io/thezero
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://thezero.org
+  * I am thezero (https://keybase.io/thezero) on keybase.
+  * I have a public key with fingerprint 7160 27C8 863D DF61 DFE5  ED3D F628 F9E4 1DD7 C073
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.7.2"
+        },
+        "key": {
+            "fingerprint": "716027c8863ddf61dfe5ed3df628f9e41dd7c073",
+            "host": "keybase.io",
+            "key_id": "F628F9E41DD7C073",
+            "uid": "c196bd9bc3b922ec6acd8a6ce8e4f700",
+            "username": "thezero"
+        },
+        "merkle_root": {
+            "ctime": 1411758856,
+            "hash": "aa2c005a2eb3d88b8fe20549acd69d7e4a7c0625f25c48181cb33a4431bb18e13f7df0b235234cc40f6bcec4e9fa5250e76e9a1cd4d893a1c3ac8ed514912dec",
+            "seqno": 62890
+        },
+        "service": {
+            "hostname": "thezero.org",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1411759016,
+    "expire_in": 157680000,
+    "prev": "6397665c9f200632c2c0e16afb6939ba631f81e801f165c886cfc8038011ec4b",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owFVkn9sFEUUx+9aIEogUTSA0BpYYyNJPWZ2dmdnToiiWI3Bf1BriJZzZ+bNdaHs
+HrvbSmmK0cSAJmpjaGLIWYhBNP6ICRL8AxusttHEKEmjARP9QyAgKa01xSPUkDpb
+Mdr96+3M533f+755fYvrc3X52j3Xzjee/iLJf3tJ5J68+8T7PZaIVLdV7LFkRwBh
+mkWhvwOsorUduoWfQCGIVoWRgsK2ZNUNptnqgjgJotBQqOAVbKu3OcOzZB2EZYgr
+cZBpWR6myPYkY5QopSlWGlxQxIQ20xwcrJQnkUeMZHuUpHOqWrOapUCZ0xbDt/CH
+Hbxxo/fQP3zn7IXEnArFhSSC2zZI6kvFfCqBgaM9hDIwgfiGpbQddkMcZe3ugHh7
+B5TiKJr1LNMgI7CDsecy5lLTkJ+0mxzftyVCrm+DIIoxwTTYyHW4KUS58sDxjQNq
+u9p2pcMww1IQ4jsOwUJgBphoT2kkbOLaxJHSQZoKCdIBrn3XdhF4FLiPpXIU48QE
+xJcMlIsdjm0F0jhIYGcYWUUzA456s9+4K5CQtZ0Nba63QhSXTUoljtJIRh3moj1N
+K8XMctpdycDnQZSMxAeZRkkEoTIv9v8nxQadMw6OsBkH7KoEMZSCjHA9ypD5sjrQ
+ZTQp4R6lruTaRogSW5qZAaa+FpQTLnxKsGYYGMIaG8zsg9SSIWIOsJmF+M+kY/r0
+y0YyCcqhn3bGYPW+km+Yl8vX5RbMr8t2Nrfw5lv+XeSlD96UO/7Aor5l+6t2z0XV
+4uXbaq/eOv5d957W+Y8d20zPr09Hh5p+Gj64dUt4sn7m6tbr04f6frj36sSKwT9G
+xv78cPXCial1r48/vqi1fuSjtcff23twwZL7n7tweM9kobR77I79vx5L7to0+fLo
+I39NDS7+ffn0gepT1bazRVd65aFKvKmpb+rni3srl2vbfqvdvm88f/SXsUd3Vg9f
+f63W8PTAmuGhzpPPrl3f2F+lXw9uuDRD572z7rbvR/uf2Dy54fOXlh7oHHiz9fKV
+lW8fXbG6babprTu/Gli+srxscMn4mR/fqH8xuu/sqQufWRNr9jWfG2k4kutv/PTc
+M7tO8eqVT4rTH0+/++XwN0fUtdEX9N8=
+=LSFv
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/thezero
+
+==================================================================
