@@ -5,7 +5,11 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="My Lair in the Webspace">
+		<meta name="description" content="Three days ago I have talked about Shellshock, in these 3 days we have found others vulnerability for a total of 5 (CVE-2014-6271, CVE-2014-7169, CVE-2014-7186, CVE-2014-7187, CVE-2014-6277).
+
+If you don&#39;t update your system often there are a lot of possibilities that you are vulnerable.
+I reccomend to update often and keep an eye on the Shellshocker.net site.
+">
 		<meta name="author" content="TheZero">
 		<link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
 		<link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
@@ -13,7 +17,7 @@
 		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
     
-		<title>Archive</title>
+		<title>Shellshock Update!</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +53,7 @@
     <div class="links">
     
     <a href="/" class="page-link">Blog</a>
-    <a class="page-link active" href="/archive.html">Archive</a>
+    <a class="page-link" href="/archive.html">Archive</a>
     <a class="page-link" href="/pages.html">Pages</a>
     
       
@@ -81,33 +85,80 @@
         <div id="articles">
           <div class="article-list">
             <div class="entry">
-  <h1 class="entry-title">Post Archive</h1>
-  <ul class="posts">
-    
-    	
-     		<li> Sep 28, 2014 &raquo; Category: Blog &raquo;  <a href="/blog/2014/09/28/Shellshock_update/">Shellshock Update!</a></li>
-    	
-    
-    	
-     		<li> Sep 26, 2014 &raquo; Category: Blog &raquo;  <a href="/blog/2014/09/26/Shellshock/">Shellshock CVE-2014-6271</a></li>
-    	
-    
-    	
-     		<li> Sep 25, 2014 &raquo; Category: Blog &raquo;  <a href="/blog/2014/09/25/Jekyll-Intro/">Jekyll Intro</a></li>
-    	
-    
-    	
-    
-    	
-    
-    	
-    
-    	
-    
-    	
-    
-  </ul>
+
+	<div class="entry-content">
+
+	  <header>
+	    <h1 class="entry-title"><a href="/blog/2014/09/28/Shellshock_update/">Shellshock Update!</a></h1>
+	    <p class="entry-meta">
+		    Sep 28, 2014
+		     • Category: Blog
+	    </p>
+	  </header>
+
+	  <article class="entry-body">
+	  	
+	  		<p>Three days ago I have talked about Shellshock, in these 3 days we have found others vulnerability for a total of 5 (<a target="_blank" href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271">CVE-2014-6271</a>, <a target="_blank" href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-7169">CVE-2014-7169</a>, <a target="_blank" href="https://access.redhat.com/security/cve/CVE-2014-7186">CVE-2014-7186</a>, <a target="_blank" href="https://access.redhat.com/security/cve/CVE-2014-7187">CVE-2014-7187</a>, <a target="_blank" href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6277">CVE-2014-6277</a>).</p>
+
+<p>If you don&#39;t update your system often there are a lot of possibilities that you are vulnerable.
+I reccomend to update often and keep an eye on the <a href="http://shellshocker.net/">Shellshocker.net site</a>.</p>
+
+<!-- more --> 
+
+<p>On the shellshock site you can find a list to the known Exploit for test them in your shell.</p>
+
+<p>And also a simple command to update your bash to the lastest patch from GNU</p>
+
+<p><code>curl https://shellshocker.net/fixbash | sh</code></p>
+
+<p>or manually</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">cd ~/
+mkdir bash
+cd bash
+wget https://ftp.gnu.org/gnu/bash/bash-4.3.tar.gz
+#download all patches
+for i in $(seq -f &quot;%03g&quot; 0 27); do wget     https://ftp.gnu.org/gnu/bash/bash-4.3-patches/bash43-$i; done
+tar zxvf bash-4.3.tar.gz 
+cd bash-4.3
+for i in $(seq -f &quot;%03g&quot; 0 27);do patch -p0 &lt; ../bash43-$i; done
+./configure &amp;&amp; make &amp;&amp; make install 
+</code></pre></div>
+<p><strong style="color:red">Please Note!</strong><br/>
+<p>The patches available from bash are not yet 100% issue free. It&#39;s highly recommended that you still update your system and patch bash, even if it only fixes the first few exploits on your system. Please check back occasionally for updates, we will keep this page up to date with the latest patches available.</p></p>
+
+  		
+	  </article>
+
+  </div>
+
 </div>
+
+
+	<div class="article-author">
+    <div class="avatar">
+    <img width="50" height="50" src="https://gravatar.com/avatar/0034b4b3f3aaeced2804f8f76aa94080?s=50" alt=" Avatar"/>
+    </div>
+    <div class="name">
+        <h4>Assembled by <b>TheZero</b> </h4>
+        Single line description about the author
+    </div>
+</div>
+
+	
+	    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = '';
+	(function() {
+	    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+	    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	
+
+
 
           </div>
         </div>
