@@ -5,10 +5,11 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Three days ago I have talked about Shellshock, in these 3 days we have found others vulnerability for a total of 6 (CVE-2014-6271, CVE-2014-7169, CVE-2014-7186, CVE-2014-7187, CVE-2014-6277, CVE-2014-6278).
+		<meta name="description" content="Personally I love Open Source, I love Torrent, and I love Copyleft, so I wanted to make a proxy for ThePirateBay (the link is offline in some country).
 
-If you don&#39;t update your system often there are a lot of possibilities that you are vulnerable.
-I reccomend to update often and keep an eye on the Shellshocker.net site.
+It&#39;s a simple mirror proxy made with Node.js.
+
+There are a few bug and sometime the connection gives a Timeout, but it simply works :D
 ">
 		<meta name="author" content="TheZero">
 		<link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
@@ -17,7 +18,7 @@ I reccomend to update often and keep an eye on the Shellshocker.net site.
 		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
     
-		<title>Shellshock Update!</title>
+		<title>My The Pirate Bay proxy</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -89,44 +90,32 @@ I reccomend to update often and keep an eye on the Shellshocker.net site.
 	<div class="entry-content">
 
 	  <header>
-	    <h1 class="entry-title"><a href="/blog/2014/09/28/Shellshock_update/">Shellshock Update!</a></h1>
+	    <h1 class="entry-title"><a href="/blog/2014/10/04/tpb_node_proxy/">My The Pirate Bay proxy</a></h1>
 	    <p class="entry-meta">
-		    Sep 28, 2014
+		    Oct 4, 2014
 		     • Category: Blog
 	    </p>
 	  </header>
 
 	  <article class="entry-body">
 	  	
-	  		<p>Three days ago I have talked about Shellshock, in these 3 days we have found others vulnerability for a total of 6 (<a target="_blank" href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271">CVE-2014-6271</a>, <a target="_blank" href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-7169">CVE-2014-7169</a>, <a target="_blank" href="https://access.redhat.com/security/cve/CVE-2014-7186">CVE-2014-7186</a>, <a target="_blank" href="https://access.redhat.com/security/cve/CVE-2014-7187">CVE-2014-7187</a>, <a target="_blank" href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6277">CVE-2014-6277</a>, <a target="_blank" href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6278">CVE-2014-6278</a>).</p>
+	  		<p>Personally I love Open Source, I love Torrent, and I love Copyleft, so I wanted to make a proxy for <a href="http://thepiratebay.se/">ThePirateBay</a> (the link is offline in some country).</p>
 
-<p>If you don&#39;t update your system often there are a lot of possibilities that you are vulnerable.
-I reccomend to update often and keep an eye on the <a href="http://shellshocker.net/">Shellshocker.net site</a>.</p>
+<p>It&#39;s a simple mirror proxy made with Node.js.</p>
 
-<!-- more --> 
+<p>There are a few bug and sometime the connection gives a Timeout, but it simply works :D</p>
 
-<p>On the shellshock site you can find a list to the known Exploit for test them in your shell.</p>
+<!-- more -->
 
-<p>And also a simple command to update your bash to the lastest patch from GNU</p>
+<p>At the moment I don&#39;t host the proxy because I don&#39;t have enought bandwidth on my server.
+Maybe you can do it :)</p>
 
-<p><code>curl https://shellshocker.net/fixbash | sh</code></p>
+<p>Here the project source: <a href="https://github.com/TheZ3ro/tpb-node-proxy">https://github.com/TheZ3ro/tpb-node-proxy</a></p>
 
-<p>or manually</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cd ~/
-mkdir bash
-cd bash
-wget https://ftp.gnu.org/gnu/bash/bash-4.3.tar.gz
-#download all patches
-for i in $(seq -f &quot;%03g&quot; 0 27); do wget     https://ftp.gnu.org/gnu/bash/bash-4.3-patches/bash43-$i; done
-tar zxvf bash-4.3.tar.gz 
-cd bash-4.3
-for i in $(seq -f &quot;%03g&quot; 0 27);do patch -p0 &lt; ../bash43-$i; done
-./configure &amp;&amp; make &amp;&amp; make install 
-</code></pre></div>
-<p><strong style="color:red">Please Note!</strong><br/>
-<p>The patches available from bash are not yet 100% issue free. It&#39;s highly recommended that you still update your system and patch bash, even if it only fixes the first few exploits on your system. Please check back occasionally for updates, we will keep this page up to date with the latest patches available.</p></p>
+<p>The project is based on <a href="https://github.com/piratebayproxy/PHP-The-Pirate-Bay-Proxy/">PHP ThePirateBay Proxy</a> and use
+Tor, privoxy and curl.</p>
 
-<p><img style="width: 400px;" src="https://pbs.twimg.com/media/ByoFq6JIAAE1QQm.jpg"/></p>
+<p>The only dependence is <a href="https://www.npmjs.org/package/node-curl">node-curl</a>.</p>
 
   		
 	  </article>
