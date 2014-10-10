@@ -44,7 +44,7 @@ a .icon-rotate-90:before,a .icon-rotate-180:before,a .icon-rotate-270:before,a .
 /* icons that I truly need */
 .icon-tw:before{content:"\f099";}
 .icon-heart:before{content:"\f004";}
-.icon-github:before{content:"\f09b";}
+.icon-gh:before{content:"\f09b";}
 .icon-bitcoin:before,.icon-btc:before{content:"\f15a";}
 .icon-bitbucket:before{content:"\f171";}
 .icon-android:before{content:"\f17b";}
