@@ -1,6 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
-
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
 {
   border:0;
@@ -15,7 +14,7 @@ body {
   background-color: rgb(238, 238, 238);
 }
 
-.padding a { 
+.padding a {
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -45,15 +44,15 @@ body {
 
 .grey {
 	background-color: rgb(238, 238, 238);
-	
+
 }
 
-.text.bold, strong, b {
+.bold, strong, b {
     font-weight: 700;
 }
 
-.text.center {
-	text-align: center;	
+.center {
+	text-align: center;
 }
 
 .f div {
@@ -81,11 +80,24 @@ body {
 	line-height: 1.42857;
 	background-color: rgb(255, 255, 255);
 	border: 1px solid rgb(221, 221, 221);
+  width: 170px;
+  top: 40px;
+  position: relative;
 }
 
-.home {
+.top {
   margin-top: 50px;
-  margin-bottom: 50px;
+}
+
+.top a i {
+  color: #CDCDCD;
+}
+.top a i:hover {
+  color: #C1C1C1;
+}
+
+.top hr {
+  border-color: #DEDEDE;
 }
 
 .jumbotron h1, .jumbotron .h1 {
@@ -106,4 +118,35 @@ body {
 .social{color:rgb(238, 238, 238);padding:0 1%;}
 .social:hover{color:#666;text-decoration:none;}
 
+.r {
+  text-align: left;
+  border-bottom: 1px solid #AAA;
+  margin-bottom: 18px;
+  padding-bottom: 5px;
+}
 
+.homepage {
+  margin-left: 10px;
+}
+
+h2 .mega-octicon {
+  margin-right: 10px;
+}
+
+#new-footer {
+  font-size: 16px;
+}
+.icon {
+    color: #C4D2DF;
+}
+li {
+    list-style: outside none none;
+}
+.inline ul, .inline li {
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+}
+footer{
+  text-align: left;
+}
