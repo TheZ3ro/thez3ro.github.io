@@ -168,3 +168,22 @@ li {
 footer{
   text-align: left;
 }
+.selector {
+  margin-bottom:30px;
+}
+.selector [class^="col-"] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-right:10px;
+  background-color: rgba(86, 61, 124, 0.15);
+  border: 1px solid rgba(86, 61, 124, 0.2);
+  transition: all 700ms;
+}
+.selector .active, .selector .active:hover {
+  background-color: rgba(0, 12, 255, 0.15) !important;
+  border: 1px solid rgba(0, 12, 255, 0.2) !important;
+}
+.selector [class^="col-"]:hover {
+  background-color: rgba(0, 210, 62, 0.15);
+  border: 1px solid rgba(0, 210, 62, 0.2);
+}

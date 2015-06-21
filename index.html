@@ -63,15 +63,22 @@
 </div>
 <div class="jumbotron jb gray" style="padding-top:0px">
   <div class="container">
-		<h1>Some project </h1>
+		<h1>Project </h1>
+	<div class="row selector">
+		<a href="javascript:_github('t')" class="col-md-offset-1 col-md-2 active">All</a>
+		<a href="javascript:_github('a')" class="col-md-2">Active</a>
+		<a href="javascript:_github('i')" class="col-md-2">Inactive</a>
+		<a href="javascript:_github('f')" class="col-md-2">Fire-and-Forget</a>
+		<a href="javascript:_github('o')" class="col-md-2">Obsolete</a>
+	</div>
     <div id="repo" class="col-lg-12 row">
     </div>
-		<nav>
-		  <ul class="pager">
-		    <li class="previous" id="old"><a href="javascript:github(page+1,'#old')"><span aria-hidden="true">&larr;</span> Older</a></li>
-		    <li class="next" id="new"><a href="javascript:github(page-1,'#new')">Newer <span aria-hidden="true">&rarr;</span></a></li>
-		  </ul>
-		</nav>
+	<nav id="pager">
+	  <ul class="pager">
+	    <li class="previous" id="old"><a href="javascript:github(page+1,'#old')"><span aria-hidden="true">&larr;</span> Older</a></li>
+	    <li class="next" id="new"><a href="javascript:github(page-1,'#new')">Newer <span aria-hidden="true">&rarr;</span></a></li>
+	  </ul>
+	</nav>
   </div>
 </div>
 
