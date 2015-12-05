@@ -73,7 +73,7 @@
     </div>
 	</div>
 </div>
-<div class="jumbotron jb gray" style="padding-top:0px">
+<div id="project" class="jumbotron jb gray" style="padding-top:0px">
   <div class="container">
 		<h1>Project </h1>
 	<div class="row selector">
@@ -166,6 +166,6 @@
     <script src="./js/vendors/async.js"></script>
     <script src="./js/gh3.min.js"></script>
     <script src="./js/github.js"></script>
-		<script>github(1);</script>
+    <script>if(document.location.toString().indexOf("github")>=0){ github(1); } else { $("#project").hide(); }</script>
   </body>
 </html>
