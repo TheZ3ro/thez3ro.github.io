@@ -178,6 +178,7 @@ footer{
   background-color: rgba(86, 61, 124, 0.15);
   border: 1px solid rgba(86, 61, 124, 0.2);
   transition: all 700ms;
+  height: 170px;
 }
 .selector .active, .selector .active:hover {
   background-color: rgba(0, 12, 255, 0.15) !important;
