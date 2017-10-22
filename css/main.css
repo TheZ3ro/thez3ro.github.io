@@ -36,6 +36,10 @@ a:hover {
   color: #428bca;
 }
 
+h1 {
+  font-size: 43px;
+}
+
 .midnighblue {
 	background-color: #2c3e50;
 	color: rgb(196, 210, 223);
@@ -89,4 +93,67 @@ a:hover {
 footer, footer > a {
   text-align: left;
   font-size: 17px;
+}
+
+header {
+  margin-bottom: 25px;
+}
+
+header .links a.page-link {
+  text-decoration: none;
+  padding: 0 5px;
+  border-bottom: 1px solid #428bca;
+}
+
+header .links a.page-link:hover {
+  text-decoration: none;
+  color: #507493;
+  border-bottom: 1px solid #507493;
+}
+
+.blog h1 {
+  font-size: 50px;
+}
+
+.blog ul {
+  list-style-type: none;
+}
+
+.blog ul.posts, .blog ul.archive {
+  margin-top: 20px;
+}
+
+.blog ul.posts li .post-link {
+  font-weight: bold;
+  font-size: 30px;
+}
+.blog ul.posts li .post-date {
+  font-style: italic;
+  color: #507493;
+}
+
+.blog ul.posts li {
+  margin-bottom: 30px;
+}
+
+h1.entry-title {
+  font-size: 37px;
+}
+
+article {
+  font-size: 18px;
+}
+
+article.entry-body > * {
+  margin: 20px 0;
+}
+
+article.entry-body ul, article.entry-body ol {
+  left: 20px;
+  position: relative;
+}
+
+article.entry-body img {
+    margin: 0 auto;
+    display: block;
 }
