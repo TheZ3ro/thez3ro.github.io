@@ -2,10 +2,19 @@
 layout: default
 permalink: 404.html
 ---
+<script>
+// bad workaround to project-specific Github Pages like https://thez3ro.github.io/project/
+if(window.location.hostname != "thez3ro.github.io"){ 
+    var loc = window.location.href;
+    loc = loc.replace("thezero.org", "thez3ro.github.io");
+    window.location.replace(loc);
+}
+</script>
+
 <h1 class="entry-title">Error 404 &nbsp;&nbsp;&nbsp;:(</h1>
 <p>
 	<br/><br/>
-	<a href="./index.html">Back to the homepage</a><br/>
+	<a href="/index.html">Back to the homepage</a><br/>
 	<br/>
 </p>
 <div class="col-md-12 center top">
