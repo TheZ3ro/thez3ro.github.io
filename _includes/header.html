@@ -1,9 +1,0 @@
-<header id="main-header">
-  <div class="links">
-  {% assign current = page.title %}
-  <a class="page-link" href="/" >Home</a>
-  <a class="page-link{% if current == null %} active{% endif %}" href="/blog" >Blog</a>
-  <a class="page-link{% if current == "Archive" %} active{% endif %}" href="/blog/archive/">Archive</a>
-  <a class="page-link{% if current == "About" %} active{% endif %}" href="/#about">About</a>
-  </div>
-</header>

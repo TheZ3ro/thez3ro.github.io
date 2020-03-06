@@ -59,7 +59,7 @@ h1 {
 }
 
 .top {
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .top hr {
@@ -92,7 +92,7 @@ h1 {
 
 footer, footer > a {
   text-align: left;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 header {
@@ -102,7 +102,6 @@ header {
 header .links a.page-link {
   text-decoration: none;
   padding: 0 5px;
-  border-bottom: 1px solid #428bca;
 }
 
 header .links a.page-link:hover {
@@ -156,4 +155,17 @@ article.entry-body ul, article.entry-body ol {
 article.entry-body img {
     margin: 0 auto;
     display: block;
+}
+
+article.entry-body code {
+  font-family: monospace;
+  font-size: 85%;
+}
+
+.highlight span {
+  font-family: monospace !important;
+}
+
+.archive li > .date {
+  font-size: 65%;
 }
