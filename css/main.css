@@ -169,3 +169,15 @@ article.entry-body code {
 .archive li > .date {
   font-size: 65%;
 }
+
+@media print, screen and (max-width: 720px) {
+  .jumbotron {
+    padding: 0;
+  }
+  .container {
+    padding: 0;
+  }
+  .blog {
+    margin-bottom: 30px;
+  }
+}
