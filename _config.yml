@@ -11,6 +11,9 @@ description: My Lair in the Webspace
 keybase_username: thezero
 twitter_username: Th3Zer0
 github_username: TheZ3ro
+bluesky_username: thezero.org
 
 # Build settings
 permalink: pretty
+
+include: [".well-known"]
