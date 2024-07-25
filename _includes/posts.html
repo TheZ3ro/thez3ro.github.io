@@ -1,13 +1,15 @@
-<div class="blog">
-  <ul class="archive">
-    {% for post in site.posts %}
-      {% if post.ispage != true %}
-        {% if post.layout != 'external' %}
-          <li><a href="{{ post.url }}">{{ post.title }}</a> <span class="date">&raquo; {{ post.date | date: "%b %-d, %Y" }} </span></li>
-        {% else %}
-          <li><a href="{{ post.exturl }}" target="_blank">{{ post.title }}</a> <span class="date">&raquo; {{ post.date | date: "%b %-d, %Y" }} </span></li>
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </ul>
-</div>
+<ul class="posts">
+{% for post in posts %}
+  {% if post.layout != 'external' %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a> 
+      <i class="meta">&raquo; {{ post.date | date: "%b %-d, %Y" }} </i>
+    </li>
+  {% else %}
+    <li>
+      <a href="{{ post.exturl }}" target="_blank">{{ post.title }}</a> 
+      <i class="meta">&raquo; {{ post.date | date: "%b %-d, %Y" }} </i>
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>

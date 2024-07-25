@@ -18,37 +18,31 @@ If you want more Deep Packet Inspection, you can:
  - [ARP-Poison your device](http://openmaniak.com/ettercap_arp.php) and Run Wireshark
  - Playing with [BetterCap](http://www.bettercap.org/)
 
-<!-- more -->
-<a name="more"></a>
-
 <h3>Requirements</h3>
 
  - OWASP ZAP Installed on your PC
  - Genymotion/Android Emulator (*if you want emulate the App*)
  - An Android Device
 
-Step on PC will be highlighted <span class="red">like this</span><br/>
-Step on Android will be highlighted <span class="blue">like this</span>
-
 <h3>Configuring OWASP ZAP</h3>
 
 1. Fire up ZAP Proxy, Create your Session and Contest if you want.
 Now export the OWASP Root Certificate.
 
-2. Go in <span class="red">**Tools > Options > Dynamic SSL Certificates > Save**</span></span> and save the Cert to a file. <br/>
+2. Go in **Tools > Options > Dynamic SSL Certificates > Save** and save the Cert to a file. <br/>
 *When ZAP first starts up, it generates a certificate valid during one year. You can also generate a new one from the Dynamic SSL Certificates section.*
 
 3. Transfer the Certificate to the Android Device with `adb push owasp_zap_root_ca.cer sdcard/`<br/>
 In GenyMotion you can also Drag&Drop the Cert file on the Emulator.
 
-4. Install the Certificate from <span class="blue">**Settings->WiFi->Advanced->Install Certificate**</span>, select your file and Install it.<br/><br/>
+4. On your phone, install the Certificate from **Settings->WiFi->Advanced->Install Certificate**, select your file and Install it.<br/><br/>
 *Since the Certificate is not Trusted and we are MiTM-ing the connection, a notification will pop-up saying:* `Network May be monitored by an Unknown Third party`<br/>
 **It's ok**, the Cert is working :D<br/>
 *Remember to remove the Cert when you finish your Proxy session*
 
 5. **If you are using GenyMotion ignore this step**<br/>Now we need to tell ZAP to listen from all the device in the LAN.
 By default ZAP listen on `localhost:8080` so it's visible only on our PC.<br/>
-Go to <span class="red">**Tool > Options > Local Proxy**</span> and type in your local IP address. (something like `192.168.1.2`...you know)
+Go to **Tool > Options > Local Proxy** and type in your local IP address. (something like `192.168.1.2`...you know)
 
 <a name="Configuring"></a>
 <h3>Configuring Android</h3>
@@ -75,7 +69,7 @@ You’ll need ***root*** access to get it to work.
 
 In your Genymotion Android emulator:
 
-1. <span class="blue">**Settings -> Wifi -> Press and hold your active network**</span>
+1. **Settings -> Wifi -> Press and hold your active network**
 2.  Select **“Modify Network”**
 3.  Select **“Show Advanced Options”**
 4.  Select **“Proxy Settings -> Manual”**
@@ -83,20 +77,15 @@ In your Genymotion Android emulator:
 6.  Set your Port to: `8080`
 7.  Press **Save**
 
-<a name="Android"></a>
 <h4>Using An Android Device</h4>
 
-1. <span class="blue">**Settings -> Wifi -> Press and hold your active network**</span>
+1. **Settings -> Wifi -> Press and hold your active network**
 2.  Select **“Modify Network”**
 3.  Select **“Show Advanced Options”**
 4.  Select **“Proxy Settings -> Manual”**
 5.  Set your Proxy to the OWASP ZAP IP (something like) `192.168.1.2`
 6.  Set your Port to: `8080`
 7.  Press **Save**
-
-<h3>Enjoy ;)</h3>
-
------
 
 **Source**
 

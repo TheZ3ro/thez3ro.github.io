@@ -17,9 +17,6 @@ It's easier to trust an Open-Source, Audited software that a Proprietary one.
 
 So I will explain why in my opinion is better license Crypto Software under GPL.
 
-<!-- more -->
-<a name="more"></a>
-
 Note That I love Public Domain. (in short PD)<br/>
 Public domain software allows anyone to do whatever they want with software.
 In short software is not subject to copyright.
@@ -48,9 +45,7 @@ Some example can be:
  - Telegram for Android and Other Telegram Android forks
  - many more...
 
-<h3>So do a favor to your Users, use the GPL license for your Crypto.</h3>
-
------
+<h4>So do a favor to your Users, use the GPL license for your Crypto.</h4>
 
 **Source**
 

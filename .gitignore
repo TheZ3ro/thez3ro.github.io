@@ -1,3 +1,4 @@
+.jekyll-cache/
 Gemfile.lock
 test/dest
 *.gem

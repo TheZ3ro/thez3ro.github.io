@@ -2,19 +2,39 @@
 layout: default
 ---
 
-<div class="top">
-	<a name="about"></a>
-	<p>
-	Hi, I'm TheZero.<br/>
-	<br/>
-	I'm a Security Researcher @ <a href="https://www.shielder.it/blog/" target="_blank">Shielder</a>.
-	<br/>
-	I was a <a href="https://en.wikipedia.org/wiki/Capture_the_flag#Computer_security" target="_blank">CTF</a> player @ <a href="https://jbzteam.github.io/" target="_blank">JBZ</a>.
-	I also was one of the maintainers of <a href="http://keepassxc.org/" target="_blank">KeePassXC</a> and I've been a collaborator for <a href="https://guardianproject.info/" target="_blank">TheGuardianProject</a> on <a href="https://f-droid.org/" target="_blank">FDroid</a>.<br/>
-	I'm also a very curious person and I love everything that involves Computers, but I also really enjoy eletronics and lock-picking.
-	</p>
-</div>
-<div class="top">
-	<hr/>
-</div>
-{% include posts.html %}
+<section>
+  <aside id="propic">
+    <img alt="Me clifjumping from a hill" src="/assets/images/propic.jpg" />
+  </aside>
+  <h4>Hi, I'm TheZero.</h4>
+  <p>
+    But most people call me Davide.<br/>
+    I'm currently a Security Researcher @ <a href="https://www.shielder.it/blog/" target="_blank">Shielder</a>.<br/>
+    I used to play <a href="https://en.wikipedia.org/wiki/Capture_the_flag#Computer_security" target="_blank">CTF</a> with <a href="https://jbzteam.github.io/" target="_blank">JBZ</a>.<br/>
+    Previously, I've been one of the maintainers of <a href="http://keepassxc.org/" target="_blank">KeePassXC</a>, and I've been a collaborator for <a href="https://guardianproject.info/" target="_blank">TheGuardianProject</a> on <a href="https://f-droid.org/" target="_blank">FDroid</a>.<br/>
+    I'm a very curious person, and I love everything that involves Computers. I also really enjoy electronics and lock-picking.
+  </p>
+</section>
+<section>
+  <h3>Projects</h3>
+  <article class="project">
+    <aside>
+      <img class="icon" alt="Osservatorio Nessuno logo" src="/assets/images/0n.png" />
+    </aside>
+    <a href="https://osservatorionessuno.org/"><strong>Osservatorio Nessuno</strong></a><br/>
+    Non-profit association that is committed to protect the right to privacy and anonymity.
+  </article>
+  <article class="project">
+    <aside>
+      <img class="icon" alt="TumpiCon logo" src="/assets/images/tumpicon.png" />
+    </aside>
+    <a href="https://tumpicon.org/"><strong>TumpiCON</strong></a><br/>
+    An invite-only priv8 l33t hacker conference based in Turin (Italy), near "tumpi".
+  </article>
+</section>
+<section class="blog">
+  <h3>Latest Articles</h3>
+  {% assign posts = site.posts | sort: 'date' | reverse | slice: 0, 5 %}
+  {% include posts.html %}
+  <a href="/blog/"><button>View all &raquo;</button></a>
+</section>

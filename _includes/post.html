@@ -1,26 +1,13 @@
-<div class="entry">
+{% assign current_year = site.time | date: "%Y" %}
+{% assign post_year = page.date | date: "%Y" %}
+{% assign years_old = current_year | minus: post_year %}
 
-	<div class="entry-content">
+<section>
+  <header>
+  <h2>{{ page.title }}</h2>
+  <i class="meta">Posted on: {{ page.date | date: "%b %-d, %Y" }}</i>
+  {% if years_old > 5 %}<p class="notice"><strong>Notice:</strong> This post is {{ years_old }} years old, thus it could contain old or incorrect information.</p>{% endif %}
+  </header>
 
-	  <header>
-	    <h1 class="entry-title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
-	    <p class="entry-meta">
-		    {{ page.date | date: "%b %-d, %Y" }}
-		    {% if page.category %} • Category: {{ page.category|capitalize }}{% endif %}
-	    </p>
-	  </header>
-
-	  <article class="entry-body">
-	  	{% if content %}
-	  		{{ content }}
-  		{% else %}
-	  		{{ page.excerpt }}
-	  		{% if page.content contains "<!-- more -->" %}
-	  		<p><a href="{{ page.url }}#more">Read more »</a></p>
-	  		{% endif %}
-  		{% endif %}
-	  </article>
-
-  </div>
-
-</div>
+  {{ content }}
+</section>

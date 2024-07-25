@@ -18,17 +18,11 @@ If you want more Deep Packet Inspection, you can:
  - [ARP-Poison your device](http://openmaniak.com/ettercap_arp.php) and Run Wireshark
  - Playing with [BetterCap](http://www.bettercap.org/)
 
-<!-- more -->
-<a name="more"></a>
-
 <h3>Requirement</h3>
 
  - Charles Installed on your PC
  - Genymotion/Android Emulator (*if you want emulate the App*)
  - An Android Device
-
-Step on PC will be highlighted <span class="red">like this</span><br/>
-Step on Android will be highlighted <span class="blue">like this</span>
 
 <h3>Configuring Charles Proxy</h3>
 
@@ -40,22 +34,18 @@ Step on Android will be highlighted <span class="blue">like this</span>
    In GenyMotion you can also Drag&Drop the Cert file on the Emulator.
    - Otherwise you can use a Cert from Charles CA visiting this url:<br/>`http://www.charlesproxy.com/getssl/`
 
-3. Install the Certificate from <span class="blue">**Settings->WiFi->Advanced->Install Certificate**</span>, select your file and Install it.<br/><br/>
+3. Install the Certificate from **Settings->WiFi->Advanced->Install Certificate**, select your file and Install it.<br/><br/>
 *Since the Certificate is not Trusted and we are MiTM-ing the connection, a notification will pop-up saying:* `Network May be monitored by an Unknown Third party`<br/>
 **It's ok**, the Cert is working :D<br/>
 *Remember to remove the Cert when you finish your Proxy session*
 
 5. **If you are using GenyMotion ignore this step**<br/>Now we need to tell Charles to listen from all the device in the LAN.
 By default Charles listen on `localhost:8080` so it's visible only on our PC.<br/>
-Go to <span class="red">**Proxy > Access Control Settings...**</span> press the **Add** button, and type in your local IP address and click **Ok**. (something like `192.168.1.2`...you know)
+Go to **Proxy > Access Control Settings...** press the **Add** button, and type in your local IP address and click **Ok**. (something like `192.168.1.2`...you know)
 
 <h3>Configuring Android</h3>
 
 Please read the **Configuring Android** section of the [OWASP ZAP Post]({{ site.url }}/blog/2016/01/25/android_proxy_zap#Configuring) (it's the same)
-
-<h3>Enjoy ;)</h3>
-
------
 
 **Source**
 
