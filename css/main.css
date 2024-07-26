@@ -39,6 +39,7 @@ img.icon {
   height: 4rem;
   margin-right: 0.8rem;
   vertical-align: top;
+  max-width: none;
 }
 
 article.project {
