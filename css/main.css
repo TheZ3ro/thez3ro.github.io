@@ -1,6 +1,15 @@
-:root {
-  --bg: rgb(238, 238, 238);
-  --accent-bg: rgb(238, 238, 238);
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: rgb(238, 238, 238);
+    --accent-bg: rgb(238, 238, 238);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1D1B22;
+    --accent-bg: #1D1B22;
+  }
 }
 
 body > header > :only-child {
